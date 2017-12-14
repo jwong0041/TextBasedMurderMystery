@@ -1,2 +1,3 @@
 # TextBasedMurderMystery
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+http://www.detectiveconanworld.com/wiki/The_Detective_Boys_and_the_Ghost_Mansion
