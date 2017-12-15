@@ -1,5 +1,6 @@
 
-public class Nephew {
+public class Nephew extends Person
+{
 
 	public Nephew() {
 		// TODO Auto-generated constructor stub
