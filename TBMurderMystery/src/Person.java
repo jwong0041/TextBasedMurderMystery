@@ -4,6 +4,7 @@ public class Person
 	String firstName;
 	String familyName;
 	int xLoc, yLoc;
+	String title;
 	
 	public int getxLoc()
 	{
@@ -22,10 +23,11 @@ public class Person
 		this.yLoc = yLoc;
 	}
 	
-	public Person (String firstName, String familyName, int xLoc, int yLoc)
+	public Person (String firstName, String familyName, String title, int xLoc, int yLoc)
 	{
 		this.firstName = firstName;
 		this.familyName = familyName;
+		this.title = title;
 		this.xLoc = xLoc;
 		this.yLoc = yLoc;
 	}
