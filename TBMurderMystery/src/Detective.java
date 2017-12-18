@@ -1,5 +1,5 @@
 
-public class Detective 
+public class Detective extends Person
 {
 
 }
