@@ -31,9 +31,9 @@ public class Room
 		} 
 		else if (occupant != null)
 		{
-		System.out.print("[");
-		occupant.print();
-		System.out.print("]");
+			System.out.print("[");
+			occupant.print();
+			System.out.print("]");
 		}
 		else if (explored)
 		{

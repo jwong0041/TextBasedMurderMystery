@@ -14,5 +14,7 @@ public class Runner
 		System.out.println("Butler: Welcome to the mansion of " + Master.getFamilyName());
 		System.out.println("Maid: We are glad that you didn't get soaked in the rain.\r\n" +
 							"");
+		
+		Board 1 = new Board(Room [][] rooms);
 	}
 }

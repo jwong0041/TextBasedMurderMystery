@@ -1,4 +1,5 @@
 
-public class DetectivesJournal {
+public class DetectivesJournal extends Object
+{
 
 }
