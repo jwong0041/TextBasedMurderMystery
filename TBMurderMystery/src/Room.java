@@ -37,6 +37,7 @@ public class Room
 		}
 		else if (explored)
 		{
+			//add extras. ex: if its dining room add D, if its Science Lab add S etc.
 			System.out.print("[ ]");
 		}
 	}
