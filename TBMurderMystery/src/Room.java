@@ -1,6 +1,7 @@
 
 public class Room 
 {
+	private boolean explored = false;
 	Person occupant;
 	int xLoc, yLoc;
 	
@@ -20,6 +21,24 @@ public class Room
 	public void leaveRoom (Person x)
 	{
 		occupant = null;
+	}
+	
+	public void print()
+	{
+		if(!explored && occupant == null)
+		{
+			System.out.print("[ ]");
+		} 
+		else if (occupant != null)
+		{
+		System.out.print("[");
+		occupant.print();
+		System.out.print("]");
+		}
+		else if (explored)
+		{
+			System.out.print("[ ]");
+		}
 	}
 	
 }
