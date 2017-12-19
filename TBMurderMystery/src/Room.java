@@ -11,6 +11,11 @@ public class Room
 		yLoc = y;
 	}
 	
+	public Room() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	public void enterRoom (Person x)
 	{
 		occupant = x;
