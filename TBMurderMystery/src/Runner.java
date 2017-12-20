@@ -1,4 +1,5 @@
-import people.Master;
+import people.Detective;
+import people.Person;
 import room.Room;
 
 public class Runner 
@@ -17,7 +18,12 @@ public class Runner
 		System.out.println("Maid: We are glad that you didn't get soaked in the rain.\r\n" +
 							"");
 		
-		Board gameBoard = new Board(1);
+		Board gameBoard = new Board(10);
 		Board.printBoard(gameBoard);
+		
+		Person Detective =  new Detective();
+		Detective.setPosition(0, 0, 6);
+		Room room = gameboard.getRooms()[0][0];
+		//room.setExplored(true);
 	}
 }
