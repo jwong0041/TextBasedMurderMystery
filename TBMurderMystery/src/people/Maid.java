@@ -1,4 +1,4 @@
-
+package people;
 public class Maid extends Person
 {
 

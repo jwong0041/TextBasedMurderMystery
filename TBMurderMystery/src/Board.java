@@ -1,3 +1,4 @@
+import room.Room;
 
 public class Board 
 {

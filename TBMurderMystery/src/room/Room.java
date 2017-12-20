@@ -1,3 +1,5 @@
+package room;
+import people.Person;
 
 public class Room 
 {

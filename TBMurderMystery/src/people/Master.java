@@ -1,4 +1,4 @@
-
+package people;
 public class Master extends Person 
 {
 
