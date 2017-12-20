@@ -1,7 +1,7 @@
 package people;
 public class Nephew extends Person
 {
-	private int xLoc, yLoc,;
+	private int xLoc, yLoc;
 	
 	public Nephew(int xLoc, int yLoc) 
 	{
