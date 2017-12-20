@@ -1,9 +1,13 @@
 package people;
 public class Master extends Person 
 {
-
-	public Master() {
+	private int xLoc, yLoc;
+	
+	public Master(int xLoc, int yLoc) 
+	{
 		// TODO Auto-generated constructor stub
+		this.xLoc = xLoc;
+		
 	}
 
 }

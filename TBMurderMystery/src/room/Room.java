@@ -39,7 +39,7 @@ public class Room
 		else if (occupant != null)
 		{
 			System.out.print("[");
-			occupant.print();
+			//occupant.print();  gotta make the print method for person
 			System.out.print("]");
 		}
 		else if (explored)

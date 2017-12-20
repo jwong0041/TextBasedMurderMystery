@@ -33,4 +33,10 @@ public class Person
 		this.yLoc = yLoc;
 	}
 	
+	public Person() 
+	{
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
 }
