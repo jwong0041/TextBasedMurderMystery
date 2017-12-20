@@ -1,13 +1,16 @@
+package room;
+import people.Person;
 
-public class FrontDoor extends Room
+public class DiningRoom extends Room
 {
 	Person occupant;
 	int xLoc, yLoc;
 	
-	public FrontDoor (int x, int y)
+	public DiningRoom (int x, int y)
 	{
-		xLoc = 5;
-		yLoc = 2;
+		//how to add more than one room as Dining Room ??
+		xLoc = 2;
+		yLoc = 0;
 	}
 	
 	public void enterRoom (Person x)
