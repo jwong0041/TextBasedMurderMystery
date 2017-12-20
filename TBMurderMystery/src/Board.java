@@ -26,4 +26,9 @@ public class Board
 		System.out.println();	//each row gets a line in between
 	}
 	
+	Person Detective =  new Detective();
+	Detective.setPosition(0, 0, 6);
+	Room room = gameboard.getRooms()[0][0];
+	//room.setExplored(true);
+	
 }

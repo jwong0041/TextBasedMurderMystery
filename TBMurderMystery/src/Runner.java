@@ -13,10 +13,11 @@ public class Runner
 							"They are the maid and butler of the mansion, asking you to come inside\r\n" +
 							"You gladly accept because of the rain, and you enter the building.");
 		System.out.println("");
-		System.out.println("Butler: Welcome to the mansion of " + Master.getFamilyName());
+	//	System.out.println("Butler: Welcome to the mansion of " + Master.getFamilyName());
 		System.out.println("Maid: We are glad that you didn't get soaked in the rain.\r\n" +
 							"");
 		
-		Board 1 = new Board(Room [][] rooms);
+		Board gameBoard = new Board(1);
+		Board.printBoard(gameBoard);
 	}
 }
