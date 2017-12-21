@@ -2,6 +2,11 @@ package people;
 
 public abstract class Person
 {
+	public Person() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	String firstName;
 	String familyName;
 	int xLoc, yLoc;

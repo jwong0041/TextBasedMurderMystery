@@ -7,7 +7,8 @@ public class Master extends Person
 	{
 		// TODO Auto-generated constructor stub
 		this.xLoc = xLoc;
-		
+		this.yLoc = yLoc;
+		//Master should be in one of the two master's study rooms. Staring at the wall. Talkin' to a ghost.
 	}
 
 }
