@@ -4,7 +4,7 @@ public class Board
 {
 	private Room [][] rooms; //declare but don't initialize
 	
-	public Board(Room[][]rooms)
+	public Board(Room[][] rooms)
 	{
 		this.rooms = rooms;
 	}
@@ -16,20 +16,23 @@ public class Board
 	
 	public void printBoard()	//can void be nonstatic?
 	{
-		for(Room[]i : rooms)
+		for(Room[] i : rooms)
 		{
-			for(Room x: i)
+			for(Room room: i)
 			{
-				x.print();		//need to write a print method in the print class
+				room.print();		//need to write a print method in the print class
 			}
 		} 
 		System.out.println();	//each row gets a line in between
-	}
-
-	public void print()
-	{
-		String a;
-		System.out.print(a);
+		
 	}
 	
+	public Room[][] getRooms() {
+		return rooms;
+	}
+	
+	public void setRooms(Room[][] rooms) {
+		this.rooms = rooms;
+	}
 }
+

@@ -1,23 +1,34 @@
 package room;
 import people.Person;
 
-public class Room 
+public abstract class Room 
 {
 	private boolean explored = false;
-	Person occupant;
+	private Person occupant;
 	int xLoc, yLoc;
 	
-	public Room (int x, int y)
+	
+	public Room (int x, int y, Person occupant)
 	{
-		xLoc = x;
-		yLoc = y;
+		this.xLoc = x;
+		this.yLoc = y;
+		this.occupant = occupant;
 	}
 	
+	//what is this???
 	public Room() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-
+	
+	public Person getOccupant() {
+		return occupant;
+	}
+	
+	public void setOccupant(Person occupant) {
+		this.occupant = occupant;
+	}
+	
 	public void enterRoom (Person x)
 	{
 		occupant = x;

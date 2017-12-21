@@ -1,13 +1,23 @@
 package people;
-public class Nephew extends Person
+
+class Nephew extends Person
 {
-	private int xLoc, yLoc;
 	
-	public Nephew(int xLoc, int yLoc) 
+	public Nephew(String firstName, String familyName, String title, int xLoc, int yLoc) 
 	{
 		// TODO Auto-generated constructor stub
-		this.xLoc = xLoc; //make the nephew stay in the nephew's room
-		this.yLoc = yLoc; //need x coord and y coord
+		super(firstName, familyName, title, xLoc, yLoc);
+		this.firstName = firstName;
+		this.familyName = familyName;
+		this.title = title;
+		this.xLoc = xLoc;
+		this.yLoc = yLoc;
+				
+		
+		//this.xLoc = xLoc; //make the nephew stay in the nephew's room
+		//this.yLoc = yLoc; //need x coord and y coord
 	}
 
+	
+	
 }

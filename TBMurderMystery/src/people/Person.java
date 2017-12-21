@@ -1,6 +1,6 @@
 package people;
 
-public class Person
+public abstract class Person
 {
 	String firstName;
 	String familyName;
@@ -33,10 +33,6 @@ public class Person
 		this.yLoc = yLoc;
 	}
 	
-	public Person() 
-	{
-		super();
-		// TODO Auto-generated constructor stub
-	}
+
 	
 }

@@ -8,8 +8,8 @@ public class FrontDoor extends Room
 	
 	public FrontDoor (int x, int y)
 	{
-		xLoc = 5;
-		yLoc = 2;
+		xLoc = 0;
+		yLoc = 0;
 	}
 	
 	public void enterRoom (Person x)
@@ -19,8 +19,13 @@ public class FrontDoor extends Room
 		x.setyLoc(this.yLoc);
 	}
 	
+	public String descriptionHouse = "The eerie house seemed to come"
+			+ " to life and the windows stared at me with a flickering anger";
+	
 	public void leaveRoom (Person x)
 	{
 		occupant = null;
 	}
 }
+
+
