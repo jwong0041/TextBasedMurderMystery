@@ -17,15 +17,27 @@ public class Runner
 System.out.println("");
 //System.out.println("Butler: Welcome to the mansion of " + Master.getFamilyName());
 System.out.println("Maid: We are glad that you didn't get soaked in the rain.\r\n" +
-				"");
+				"Butler: I noticed your trench coat... Are you a detective? \r\n");
+System.out.println(""); 
+System.out.println("Yes, my name is.... \r\n" +
+					"...What is your name?"); //after this do a scanner thing to find "my name is..."
+System.out.println(Detective.firstName + Detective.familyName);
+System.out.println("Butler: " Detective.title() + Detective.familyName() + ", there is a ghost haunting our mansion. \r\n" +
+					"Maid: Hush! Theres no way ghosts exists... \r\n" +
+					"You see sweat forming on her forehead.");
+System.out.println("");
+System.out.println("You hear a car being parked outside in the rain. \r\n" +
+					"A young man walks into the mansion. \r\n" +
+					"Maid and Butler");
+
 		Board gameBoard = new Board(10);
 		
-		String fN = "Conan";
+		String fN = "Conan";   //we should let the player do their own name?, joyin thinks player and conan should be here
 		String familyN = "Edogawa";
 		String title = "Jr.Detective";
 		
 		
-		Detective player1 = new Detective(fN, familyN, title, 0, 0);
+		Detective player1 = new Detective(fN, familyN, title, 1, 10);
 		
 		boolean gameOn = true;
 		Scanner in = new Scanner(System.in);
