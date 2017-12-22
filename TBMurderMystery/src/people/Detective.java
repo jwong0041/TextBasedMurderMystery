@@ -6,5 +6,6 @@ public class Detective extends Person {
 		super(firstName, familyName, title, xLoc, yLoc);
 	}
 	
+
 	
 }

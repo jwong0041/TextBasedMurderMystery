@@ -28,6 +28,24 @@ public abstract class Person
 	{
 		this.yLoc = yLoc;
 	}
+	public String getFirstName() {
+		return firstName;
+	}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public String getFamilyName() {
+		return familyName;
+	}
+	public void setFamilyName(String familyName) {
+		this.familyName = familyName;
+	}
+	public String getTitle() {
+		return title;
+	}
+	public String setTitle(String title) {
+		this.title = title;
+	}
 	
 	public Person (String firstName, String familyName, String title, int xLoc, int yLoc)
 	{
