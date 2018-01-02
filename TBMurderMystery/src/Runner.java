@@ -5,6 +5,63 @@ import java.util.Scanner;
 
 public class Runner 
 {
+	public static boolean validMove(String move, Person p, Room[][] map)
+	{
+		move = move.toLowerCase().trim();
+		switch (move) {
+			case "n":
+				if (p.getxLoc() > 0)
+				{
+					map[p.getxLoc()][p.getyLoc()].leaveRoom(p);
+					map[p.getxLoc()-1][p.getyLoc()].enterRoom(p);
+					return true;
+				}
+				else
+				{
+					return false;
+				}
+			case "e":
+				if (p.getyLoc()< map[p.getyLoc()].length -1)
+				{
+					map[p.getxLoc()][p.getyLoc()].leaveRoom(p);
+					map[p.getxLoc()][p.getyLoc() + 1].enterRoom(p);
+					return true;
+				}
+				else
+				{
+					return false;
+				}
+
+			case "s":
+				if (p.getxLoc() < map.length - 1)
+				{
+					map[p.getxLoc()][p.getyLoc()].leaveRoom(p);
+					map[p.getxLoc()+1][p.getyLoc()].enterRoom(p);
+					return true;
+				}
+				else
+				{
+					return false;
+				}
+
+			case "w":
+				if (p.getyLoc() > 0)
+				{
+					map[p.getxLoc()][p.getyLoc()].leaveRoom(p);
+					map[p.getxLoc()][p.getyLoc()-1].enterRoom(p);
+					return true;
+				}
+				else
+				{
+					return false;
+				}
+			default:
+				break;
+					
+		}
+		return true;
+	}
+	
 	public static void main(String[] args) 
 	{
 		
@@ -27,6 +84,7 @@ public class Runner
 		System.out.println("What is your family name?");
 		Scanner sc1 = new Scanner(System.in);
 		String familyName = sc1.nextLine();
+		String title = "Mr.";
 		
 		Detective player1 = new Detective(firstName, familyName, title, 1, 10);
 		
@@ -39,19 +97,38 @@ public class Runner
 		System.out.println("You hear a car being parked outside in the rain. \r\n" +
 					"A young man walks into the mansion. \r\n" +
 					"Maid and Butler");
-
-		Board gameBoard = new Board(10);
 		
-		boolean gameOn = true;
-		Room room = gameBoard.getRooms()[0][0];
-		//room.setExplored(true);
-		while(gameOn)
+		//Board gameBoard = new Board(5);
+		Room[][] map = new Room[5][5];
+		for (int x = 0; x<map.length; x++)
 		{
-			
-	if((player1.getxLoc() == 1) && (player1.getyLoc() == 1)) {
-		System.out.println("The eerie house seemed to come  to life and the windows stared at me with a flickering anger");
-	}
-		
+			for (int y = 0; y < map[x].length; y++)
+			{
+				map[x][y] = new Room(x,y);
+			}
 		}
+		Scanner in = new Scanner(System.in);
+		boolean gameOn = true;
+		map[0][0].enterRoom(player1);
+		//room.setExplored(true);
+		while(gameOn)	
+		{
+			System.out.println("Please choose where you would like to move");
+			String move = in.nextLine();
+			if(validMove(move, player1, map)) 
+				{
+					System.out.println("Your position is " + player1.getxLoc() + ", " + player1.getyLoc());
+				} else {
+					System.out.println("Please choose a valid move.");
+				}
+			}
+			
+			
+			
+			
 	}
-}
+
+		}
+
+
+

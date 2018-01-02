@@ -4,23 +4,25 @@ import people.Person;
 public class FrontDoor extends Room
 {
 	Person occupant;
-	int xLoc, yLoc;
+	int xLoc = 1;
+	int yLoc = 1;
 	
 	public FrontDoor (int x, int y)
 	{
-		xLoc = 0;
-		yLoc = 0;
+		super(x,y);
+		this.xLoc = x;
+		this.yLoc = y;
+
 	}
 	
+	@Override
 	public void enterRoom (Person x)
 	{
 		occupant = x;
 		x.setxLoc(this.xLoc);
 		x.setyLoc(this.yLoc);
+		System.out.println("GO away");
 	}
-	
-	public String descriptionHouse = "The eerie house seemed to come"
-			+ " to life and the windows stared at me with a flickering anger";
 	
 	public void leaveRoom (Person x)
 	{

@@ -43,10 +43,6 @@ public abstract class Person
 	public String getTitle() {
 		return title;
 	}
-	public String setTitle(String title) {
-		this.title = title;
-	}
-	
 	public Person (String firstName, String familyName, String title, int xLoc, int yLoc)
 	{
 		this.firstName = firstName;

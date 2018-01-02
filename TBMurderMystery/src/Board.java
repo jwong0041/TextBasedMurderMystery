@@ -11,7 +11,7 @@ public class Board
 	
 	public Board(int size)
 	{
-		this.rooms = new Room[6][6];
+		this.rooms = new Room[size][size];
 	}
 	
 	public void printBoard()	//can void be nonstatic?

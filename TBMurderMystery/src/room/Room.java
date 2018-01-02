@@ -1,18 +1,17 @@
 package room;
 import people.Person;
 
-public abstract class Room 
+public class Room 
 {
 	private boolean explored = false;
 	private Person occupant;
 	int xLoc, yLoc;
 	
 	
-	public Room (int x, int y, Person occupant)
+	public Room (int x, int y)
 	{
 		this.xLoc = x;
 		this.yLoc = y;
-		this.occupant = occupant;
 	}
 	
 	//what is this???
@@ -31,6 +30,7 @@ public abstract class Room
 	
 	public void enterRoom (Person x)
 	{
+		System.out.println();
 		occupant = x;
 		x.setxLoc(this.xLoc);
 		x.setyLoc(this.yLoc);
@@ -40,7 +40,7 @@ public abstract class Room
 	{
 		occupant = null;
 	}
-	
+		
 	public void print()
 	{
 		if(!explored && occupant == null)
