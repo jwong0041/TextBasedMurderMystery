@@ -10,8 +10,8 @@ public class FrontDoor extends Room
 	public FrontDoor (int x, int y)
 	{
 		super(x,y);
-		this.xLoc = x;
-		this.yLoc = y;
+		x = 1;
+		y = 1;
 
 	}
 	

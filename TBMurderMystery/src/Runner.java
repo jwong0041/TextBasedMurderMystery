@@ -97,25 +97,18 @@ public class Runner
 		System.out.println("You hear a car being parked outside in the rain. \r\n" +
 					"A young man walks into the mansion. \r\n" +
 					"Maid and Butler");
-		
-		//Board gameBoard = new Board(5);
-		Room[][] map = new Room[5][5];
-		for (int x = 0; x<map.length; x++)
-		{
-			for (int y = 0; y < map[x].length; y++)
-			{
-				map[x][y] = new Room(x,y);
-			}
-		}
+		Board gameBoard = new Board(4,10);
+		gameBoard.test();
+		gameBoard.startBoard(gameBoard.test());
 		Scanner in = new Scanner(System.in);
 		boolean gameOn = true;
-		map[0][0].enterRoom(player1);
+		gameBoard.test()[0][0].enterRoom(player1);
 		//room.setExplored(true);
 		while(gameOn)	
 		{
 			System.out.println("Please choose where you would like to move");
 			String move = in.nextLine();
-			if(validMove(move, player1, map)) 
+			if(validMove(move, player1, gameBoard.test())) 
 				{
 					System.out.println("Your position is " + player1.getxLoc() + ", " + player1.getyLoc());
 				} else {

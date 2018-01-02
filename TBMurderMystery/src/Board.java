@@ -4,14 +4,29 @@ public class Board
 {
 	private Room [][] rooms; //declare but don't initialize
 	
+	public void startBoard(Room[][] x)
+	{
+		Room[][]map = x;
+		for (int x1 = 0; x1<map.length; x1++)
+		{
+			for (int y = 0; y < map[x1].length; y++)
+			{
+				map[x1][y] = new Room(x1,y);
+			}
+		}
+	}
+	public Room[][] test() {
+		Room[][] map = rooms;
+		return map;
+	}
 	public Board(Room[][] rooms)
 	{
 		this.rooms = rooms;
 	}
 	
-	public Board(int size)
+	public Board(int x, int y)
 	{
-		this.rooms = new Room[size][size];
+		this.rooms = new Room[x][y];
 	}
 	
 	public void printBoard()	//can void be nonstatic?
