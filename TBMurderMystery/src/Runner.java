@@ -100,12 +100,12 @@ public class Runner
 					"A young man walks into the mansion. \r\n" +
 					"Maid and Butler: Welcome back. \r\n" +
 					"He walks away without responding.");
-		System.out.println("");
-		System.out.println("Maid: That was Master's nephew, " Nephew.getFirstName() + " " + Nephew.getFamilyName() + ". \r\n" +
+		System.out.println("");								//add nephew name again
+		System.out.println("Maid: That was Master's nephew, " + ". \r\n" +
 					"Butler: He spends most of his time in his laboratory. \r\n" +
 					"You: What about your master? \r\n" +
 					"They are a little hesitant in telling you. \r\n" +
-					"Maid: ... Master " + Master.getFamilyName() + " lost his wife recently... \r\n" +
+					"Maid: ... Master " + " lost his wife recently... \r\n" +
 					"Butler: We are getting worried for him because he's started to see her ghost... \r\n" +
 					"Her ghost?... Before you can ask about anything the phone rings. \r\n" +
 					"Butler: Hello?... Yes... Yes... No problem. " + player1.getTitle() + " " + player1.getFamilyName() + ", the young master wants to see you. \r\n" +
@@ -158,12 +158,19 @@ public class Runner
 			if(testMove(move, player1, gameBoard.test())) 
 				{
 					System.out.println("Your position is " + player1.getxLoc() + ", " + player1.getyLoc());
-					
+					counter++;
 				} else {
 					System.out.println("Please choose a valid move.");
 				}
 		}
-			
+		
+		if (counter == 5)
+		{
+			System.out.println("You took too long to find the culprit.\n"
+								+ "The Master of the household has died.\n"
+								+ "- G A M E   O V E R -");
+			gameOn = false;
+		}	
 			
 			
 			

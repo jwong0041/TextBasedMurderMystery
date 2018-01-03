@@ -27,7 +27,7 @@ public class FrontDoor extends Room
 		explored = true;
 		System.out.println("Joyin's a butthole");
 		}
-		
+	}	
 	
 	
 	public void leaveRoom (Person x)
