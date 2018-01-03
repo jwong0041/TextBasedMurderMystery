@@ -30,7 +30,7 @@ public class Room
 	
 	public void enterRoom (Person x)
 	{
-		System.out.println("You have hit a wall, please don't be stupid.");
+		System.out.println();
 		occupant = x;
 		x.setxLoc(this.xLoc);
 		x.setyLoc(this.yLoc);

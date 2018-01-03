@@ -3,6 +3,7 @@ import people.Person;
 import room.Room;
 import java.util.Scanner;
 import room.FrontDoor;
+import room.Hallway;
 
 public class Runner 
 {
@@ -10,7 +11,7 @@ public class Runner
 	{
 		move = move.toLowerCase().trim();
 		switch (move) {
-			case "s":
+			case "e":
 				if (p.getxLoc() > 0)
 				{
 					map[p.getxLoc()][p.getyLoc()].leaveRoom(p);
@@ -21,7 +22,7 @@ public class Runner
 				{
 					return false;
 				}
-			case "e":
+			case "n":
 				if (p.getyLoc()< 9)
 				{
 					map[p.getxLoc()][p.getyLoc()].leaveRoom(p);
@@ -33,7 +34,7 @@ public class Runner
 					return false;
 				}
 
-			case "n":
+			case "w":
 				if (p.getxLoc() < map.length - 1)
 				{
 					map[p.getxLoc()][p.getyLoc()].leaveRoom(p);
@@ -45,7 +46,7 @@ public class Runner
 					return false;
 				}
 
-			case "w":
+			case "s":
 				if (p.getyLoc() > 0)
 				{
 					map[p.getxLoc()][p.getyLoc()].leaveRoom(p);
@@ -117,6 +118,22 @@ public class Runner
 		int n9 = 9;
 		
 		gameBoard.test()[n1][n0] = new FrontDoor(n1, n0);
+		gameBoard.test()[n1][n1] = new Hallway(n1, n1);
+		gameBoard.test()[n1][n2] = new Hallway(n1, n2);
+		gameBoard.test()[n1][n3] = new Hallway(n1, n3);
+		gameBoard.test()[n1][n4] = new Hallway(n1, n4);
+		gameBoard.test()[n1][n5] = new Hallway(n1, n5);
+		gameBoard.test()[n1][n6] = new Hallway(n1, n6);
+		gameBoard.test()[n1][n7] = new Hallway(n1, n7);
+		gameBoard.test()[n1][n8] = new Hallway(n1, n8);
+		gameBoard.test()[n2][n1] = new Hallway(n2, n1);
+		gameBoard.test()[n2][n2] = new Hallway(n2, n2);
+		gameBoard.test()[n2][n3] = new Hallway(n2, n3);
+		gameBoard.test()[n2][n4] = new Hallway(n2, n4);
+		gameBoard.test()[n2][n5] = new Hallway(n2, n5);
+		gameBoard.test()[n2][n6] = new Hallway(n2, n6);
+		gameBoard.test()[n2][n7] = new Hallway(n2, n7);
+		gameBoard.test()[n2][n8] = new Hallway(n2, n8);
 		
 		
 		
