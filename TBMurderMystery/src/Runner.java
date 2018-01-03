@@ -2,6 +2,7 @@ import people.Detective;
 import people.Person;
 import room.Room;
 import java.util.Scanner;
+import room.FrontDoor;
 
 public class Runner 
 {
@@ -9,7 +10,7 @@ public class Runner
 	{
 		move = move.toLowerCase().trim();
 		switch (move) {
-			case "n":
+			case "s":
 				if (p.getxLoc() > 0)
 				{
 					map[p.getxLoc()][p.getyLoc()].leaveRoom(p);
@@ -21,7 +22,7 @@ public class Runner
 					return false;
 				}
 			case "e":
-				if (p.getyLoc()< map[p.getyLoc()].length -1)
+				if (p.getyLoc()< 9)
 				{
 					map[p.getxLoc()][p.getyLoc()].leaveRoom(p);
 					map[p.getxLoc()][p.getyLoc() + 1].enterRoom(p);
@@ -32,7 +33,7 @@ public class Runner
 					return false;
 				}
 
-			case "s":
+			case "n":
 				if (p.getxLoc() < map.length - 1)
 				{
 					map[p.getxLoc()][p.getyLoc()].leaveRoom(p);
@@ -97,13 +98,29 @@ public class Runner
 		System.out.println("You hear a car being parked outside in the rain. \r\n" +
 					"A young man walks into the mansion. \r\n" +
 					"Maid and Butler");
-		Board gameBoard = new Board(4,10);
+		Board gameBoard = new Board(10,10);
 		gameBoard.test();
 		gameBoard.startBoard(gameBoard.test());
 		Scanner in = new Scanner(System.in);
 		boolean gameOn = true;
 		gameBoard.test()[0][0].enterRoom(player1);
 		//room.setExplored(true);
+		int n0 = 0;
+		int n1 = 1;
+		int n2 = 2;
+		int n3 = 3;
+		int n4 = 4;
+		int n5 = 5;
+		int n6 = 6;
+		int n7 = 7;
+		int n8 = 8;
+		int n9 = 9;
+		
+		gameBoard.test()[n1][n0] = new FrontDoor(n1, n0);
+		
+		
+		
+		
 		while(gameOn)	
 		{
 			System.out.println("Please choose where you would like to move");

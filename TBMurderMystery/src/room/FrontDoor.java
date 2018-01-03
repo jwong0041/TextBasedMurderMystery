@@ -5,13 +5,11 @@ public class FrontDoor extends Room
 {
 	Person occupant;
 	int xLoc = 1;
-	int yLoc = 1;
+	int yLoc = 0;
 	
 	public FrontDoor (int x, int y)
 	{
 		super(x,y);
-		x = 1;
-		y = 1;
 
 	}
 	
@@ -21,7 +19,7 @@ public class FrontDoor extends Room
 		occupant = x;
 		x.setxLoc(this.xLoc);
 		x.setyLoc(this.yLoc);
-		System.out.println("GO away");
+		System.out.println("EUREKA!");
 	}
 	
 	public void leaveRoom (Person x)
