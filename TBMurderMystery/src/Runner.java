@@ -150,7 +150,7 @@ public class Runner
 		
 		
 		
-		int counter = -2;
+		int counter = 0;
 		while(gameOn)	
 		{
 			System.out.println("Please choose where you would like to move");
@@ -162,9 +162,8 @@ public class Runner
 				} else {
 					System.out.println("Please choose a valid move.");
 				}
-		}
 		
-		if (counter == 5)
+		if (counter == 125)
 		{
 			System.out.println("You took too long to find the culprit.\n"
 								+ "The Master of the household has died.\n"
@@ -176,7 +175,7 @@ public class Runner
 			
 	}
 
-		}
-
+}
+}
 
 
