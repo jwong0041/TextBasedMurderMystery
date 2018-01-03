@@ -5,7 +5,7 @@ public class Butler
 	
 	public Butler(int xLoc, int yLoc)
 	{
-		this.xLoc = xLoc;
+		this.xLoc = ;
 		this.yLoc = yLoc;
 	}
 	
