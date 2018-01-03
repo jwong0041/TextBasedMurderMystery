@@ -1,19 +1,25 @@
 import people.Detective;
 import people.Person;
 import room.Room;
+import room.Wall;
+
 import java.util.Scanner;
 import room.FrontDoor;
 import room.Hallway;
+import room.DiningRoom;
+
 
 public class Runner 
 {
+	public boolean locked;
 	public static boolean testMove(String move, Person p, Room[][] map)
 	{
 		move = move.toLowerCase().trim();
 		switch (move) {
-			case "e":
-				if (p.getxLoc() > 0)
+			case "w":
+				if ((p.getxLoc() > 0) && (map[p.getxLoc()-1][p.getyLoc()].locked() == false))
 				{
+					
 					map[p.getxLoc()][p.getyLoc()].leaveRoom(p);
 					map[p.getxLoc()-1][p.getyLoc()].enterRoom(p);
 					return true;
@@ -34,7 +40,7 @@ public class Runner
 					return false;
 				}
 
-			case "w":
+			case "e":
 				if (p.getxLoc() < map.length - 1)
 				{
 					map[p.getxLoc()][p.getyLoc()].leaveRoom(p);
@@ -147,8 +153,9 @@ public class Runner
 		gameBoard.test()[n2][n6] = new Hallway(n2, n6);
 		gameBoard.test()[n2][n7] = new Hallway(n2, n7);
 		gameBoard.test()[n2][n8] = new Hallway(n2, n8);
-		
-		
+		gameBoard.test()[n0][n1] = new DiningRoom(n0, n1);
+		gameBoard.test()[n0][n2] = new DiningRoom(n0, n2);
+		gameBoard.test()[n0][n0] = new Wall(n0, n0);
 		
 		int counter = -2;
 		while(gameOn)	

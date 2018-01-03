@@ -6,6 +6,7 @@ public class Room
 	private boolean explored = false;
 	private Person occupant;
 	int xLoc, yLoc;
+
 	
 	
 	public Room (int x, int y)
@@ -39,6 +40,10 @@ public class Room
 	public void leaveRoom (Person x)
 	{
 		occupant = null;
+	}
+	
+	public boolean locked () {
+		return false;
 	}
 		
 	public void print()

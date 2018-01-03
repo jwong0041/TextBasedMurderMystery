@@ -19,7 +19,7 @@ public class Hallway extends Room {
 		occupant = x;
 		x.setxLoc(this.xLoc);
 		x.setyLoc(this.yLoc);
-		System.out.println("Hallway seems to expand forever");
+		System.out.println("The Hallway seems to expand forever");
 	}
 	
 	public void leaveRoom (Person x)
