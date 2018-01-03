@@ -21,12 +21,12 @@ public class FrontDoor extends Room
 		occupant = x;
 		x.setxLoc(this.xLoc);
 		x.setyLoc(this.yLoc);
-		if(explored != true) {
-			System.out.println("FUCK");
+		if(explored == false) {
+			System.out.println("FUC");
 		} else {
-		explored = true;
 		System.out.println("Joyin's a butthole");
 		}
+		explored = true;
 	}	
 	
 	
