@@ -120,7 +120,7 @@ public class Runner
 		
 		
 		
-		
+		int counter = -2;
 		while(gameOn)	
 		{
 			System.out.println("Please choose where you would like to move");
@@ -128,10 +128,11 @@ public class Runner
 			if(testMove(move, player1, gameBoard.test())) 
 				{
 					System.out.println("Your position is " + player1.getxLoc() + ", " + player1.getyLoc());
+					
 				} else {
 					System.out.println("Please choose a valid move.");
 				}
-			}
+		}
 			
 			
 			
