@@ -3,6 +3,7 @@ import people.Person;
 import room.Room;
 import java.util.Scanner;
 import room.FrontDoor;
+import room.Hallway;
 
 public class Runner 
 {
@@ -10,7 +11,7 @@ public class Runner
 	{
 		move = move.toLowerCase().trim();
 		switch (move) {
-			case "s":
+			case "e":
 				if (p.getxLoc() > 0)
 				{
 					map[p.getxLoc()][p.getyLoc()].leaveRoom(p);
@@ -21,7 +22,7 @@ public class Runner
 				{
 					return false;
 				}
-			case "e":
+			case "n":
 				if (p.getyLoc()< 9)
 				{
 					map[p.getxLoc()][p.getyLoc()].leaveRoom(p);
@@ -33,7 +34,7 @@ public class Runner
 					return false;
 				}
 
-			case "n":
+			case "w":
 				if (p.getxLoc() < map.length - 1)
 				{
 					map[p.getxLoc()][p.getyLoc()].leaveRoom(p);
@@ -45,7 +46,7 @@ public class Runner
 					return false;
 				}
 
-			case "w":
+			case "s":
 				if (p.getyLoc() > 0)
 				{
 					map[p.getxLoc()][p.getyLoc()].leaveRoom(p);
@@ -67,16 +68,16 @@ public class Runner
 	{
 		
 		System.out.println("You were walking in the woods searching for a light house\r\n" +
-				"But your luck fails you and it suddenly starts to rain\r\n" +
-				"In the corner of your eye, you see a greenhouse in the far distance\r\n" + 
-				"You run towards it before the rain can pour even harder\r\n" + 
-				"Next to the greenhouse is a mansion, where you see two people walk out of the door\r\n" + 
-				"They are the maid and butler of the mansion, asking you to come inside\r\n" +
-				"You gladly accept because of the rain, and you enter the building.");
+					"But your luck fails you and it suddenly starts to rain\r\n" +
+					"In the corner of your eye, you see a greenhouse in the far distance\r\n" + 
+					"You run towards it before the rain can pour even harder\r\n" + 
+					"Next to the greenhouse is a mansion, where you see two people walk out of the door\r\n" + 
+					"They are the maid and butler of the mansion, asking you to come inside\r\n" +
+					"You gladly accept because of the rain, and you enter the building.");
 		System.out.println("");
 //System.out.println("Butler: Welcome to the mansion of " + Master.getFamilyName());
 		System.out.println("Maid: We are glad that you didn't get soaked in the rain.\r\n" +
-				"Butler: I noticed your trench coat... Are you a detective? \r\n");
+					"Butler: I noticed your trench coat... Are you a detective? \r\n");
 		System.out.println(""); 
 		System.out.println("Yes, my name is.... \r\n" +
 					"...What is your first name?"); 
@@ -85,19 +86,32 @@ public class Runner
 		System.out.println("What is your family name?");
 		Scanner sc1 = new Scanner(System.in);
 		String familyName = sc1.nextLine();
-		String title = "Mr.";
+		String title = "Detective";
 		
 		Detective player1 = new Detective(firstName, familyName, title, 1, 10);
 		
 		
-		System.out.println(player1.getFirstName()+ player1.getFamilyName());
+		System.out.println(player1.getFirstName() + " " + player1.getFamilyName());
 		System.out.println("Butler: " + player1.getTitle() + player1.getFamilyName() + ", there is a ghost haunting our mansion. \r\n" +
 					"Maid: Hush! Theres no way ghosts exists... \r\n" +
 					"You see sweat forming on her forehead.");
 		System.out.println("");
 		System.out.println("You hear a car being parked outside in the rain. \r\n" +
 					"A young man walks into the mansion. \r\n" +
-					"Maid and Butler");
+					"Maid and Butler: Welcome back. \r\n" +
+					"He walks away without responding.");
+		System.out.println("");
+		System.out.println("Maid: That was Master's nephew, " Nephew.getFirstName() + " " + Nephew.getFamilyName() + ". \r\n" +
+					"Butler: He spends most of his time in his laboratory. \r\n" +
+					"You: What about your master? \r\n" +
+					"They are a little hesitant in telling you. \r\n" +
+					"Maid: ... Master " + Master.getFamilyName() + " lost his wife recently... \r\n" +
+					"Butler: We are getting worried for him because he's started to see her ghost... \r\n" +
+					"Her ghost?... Before you can ask about anything the phone rings. \r\n" +
+					"Butler: Hello?... Yes... Yes... No problem. " + player1.getTitle() + " " + player1.getFamilyName() + ", the young master wants to see you. \r\n" +
+					"Butler: Please meet him in his Science Lab. Take 6 steps forward and it should be to your left. \r\n" +
+					"You: Ok lol.");
+		
 		Board gameBoard = new Board(10,10);
 		gameBoard.test();
 		gameBoard.startBoard(gameBoard.test());
@@ -117,6 +131,22 @@ public class Runner
 		int n9 = 9;
 		
 		gameBoard.test()[n1][n0] = new FrontDoor(n1, n0);
+		gameBoard.test()[n1][n1] = new Hallway(n1, n1);
+		gameBoard.test()[n1][n2] = new Hallway(n1, n2);
+		gameBoard.test()[n1][n3] = new Hallway(n1, n3);
+		gameBoard.test()[n1][n4] = new Hallway(n1, n4);
+		gameBoard.test()[n1][n5] = new Hallway(n1, n5);
+		gameBoard.test()[n1][n6] = new Hallway(n1, n6);
+		gameBoard.test()[n1][n7] = new Hallway(n1, n7);
+		gameBoard.test()[n1][n8] = new Hallway(n1, n8);
+		gameBoard.test()[n2][n1] = new Hallway(n2, n1);
+		gameBoard.test()[n2][n2] = new Hallway(n2, n2);
+		gameBoard.test()[n2][n3] = new Hallway(n2, n3);
+		gameBoard.test()[n2][n4] = new Hallway(n2, n4);
+		gameBoard.test()[n2][n5] = new Hallway(n2, n5);
+		gameBoard.test()[n2][n6] = new Hallway(n2, n6);
+		gameBoard.test()[n2][n7] = new Hallway(n2, n7);
+		gameBoard.test()[n2][n8] = new Hallway(n2, n8);
 		
 		
 		
