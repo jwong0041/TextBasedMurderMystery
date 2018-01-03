@@ -6,7 +6,7 @@ import room.FrontDoor;
 
 public class Runner 
 {
-	public static boolean validMove(String move, Person p, Room[][] map)
+	public static boolean testMove(String move, Person p, Room[][] map)
 	{
 		move = move.toLowerCase().trim();
 		switch (move) {
@@ -103,7 +103,7 @@ public class Runner
 		gameBoard.startBoard(gameBoard.test());
 		Scanner in = new Scanner(System.in);
 		boolean gameOn = true;
-		gameBoard.test()[0][0].enterRoom(player1);
+		gameBoard.test()[1][0].enterRoom(player1);
 		//room.setExplored(true);
 		int n0 = 0;
 		int n1 = 1;
@@ -125,7 +125,7 @@ public class Runner
 		{
 			System.out.println("Please choose where you would like to move");
 			String move = in.nextLine();
-			if(validMove(move, player1, gameBoard.test())) 
+			if(testMove(move, player1, gameBoard.test())) 
 				{
 					System.out.println("Your position is " + player1.getxLoc() + ", " + player1.getyLoc());
 				} else {
