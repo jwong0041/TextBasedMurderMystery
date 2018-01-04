@@ -7,7 +7,8 @@ import java.util.Scanner;
 import room.FrontDoor;
 import room.Hallway;
 import room.DiningRoom;
-
+import room.GuestRoom;
+import room.Bathroom;
 
 public class Runner 
 {
@@ -29,7 +30,7 @@ public class Runner
 					return false;
 				}
 			case "n":
-				if (p.getyLoc()< 9)
+				if ((p.getyLoc()< 9) && (map[p.getxLoc()][p.getyLoc() + 1].locked() == false))
 				{
 					map[p.getxLoc()][p.getyLoc()].leaveRoom(p);
 					map[p.getxLoc()][p.getyLoc() + 1].enterRoom(p);
@@ -41,7 +42,7 @@ public class Runner
 				}
 
 			case "e":
-				if (p.getxLoc() < map.length - 1)
+				if ((p.getxLoc() < 3) && (map[p.getxLoc()+1][p.getyLoc()].locked() == false))
 				{
 					map[p.getxLoc()][p.getyLoc()].leaveRoom(p);
 					map[p.getxLoc()+1][p.getyLoc()].enterRoom(p);
@@ -53,7 +54,7 @@ public class Runner
 				}
 
 			case "s":
-				if (p.getyLoc() > 0)
+				if ((p.getyLoc() > 0) && (map[p.getxLoc()][p.getyLoc()-1].locked() == false))
 				{
 					map[p.getxLoc()][p.getyLoc()].leaveRoom(p);
 					map[p.getxLoc()][p.getyLoc()-1].enterRoom(p);
@@ -125,37 +126,38 @@ public class Runner
 		boolean gameOn = true;
 		gameBoard.test()[1][0].enterRoom(player1);
 		//room.setExplored(true);
-		int n0 = 0;
-		int n1 = 1;
-		int n2 = 2;
-		int n3 = 3;
-		int n4 = 4;
-		int n5 = 5;
-		int n6 = 6;
-		int n7 = 7;
-		int n8 = 8;
-		int n9 = 9;
 		
-		gameBoard.test()[n1][n0] = new FrontDoor(n1, n0);
-		gameBoard.test()[n1][n1] = new Hallway(n1, n1);
-		gameBoard.test()[n1][n2] = new Hallway(n1, n2);
-		gameBoard.test()[n1][n3] = new Hallway(n1, n3);
-		gameBoard.test()[n1][n4] = new Hallway(n1, n4);
-		gameBoard.test()[n1][n5] = new Hallway(n1, n5);
-		gameBoard.test()[n1][n6] = new Hallway(n1, n6);
-		gameBoard.test()[n1][n7] = new Hallway(n1, n7);
-		gameBoard.test()[n1][n8] = new Hallway(n1, n8);
-		gameBoard.test()[n2][n1] = new Hallway(n2, n1);
-		gameBoard.test()[n2][n2] = new Hallway(n2, n2);
-		gameBoard.test()[n2][n3] = new Hallway(n2, n3);
-		gameBoard.test()[n2][n4] = new Hallway(n2, n4);
-		gameBoard.test()[n2][n5] = new Hallway(n2, n5);
-		gameBoard.test()[n2][n6] = new Hallway(n2, n6);
-		gameBoard.test()[n2][n7] = new Hallway(n2, n7);
-		gameBoard.test()[n2][n8] = new Hallway(n2, n8);
-		gameBoard.test()[n0][n1] = new DiningRoom(n0, n1);
-		gameBoard.test()[n0][n2] = new DiningRoom(n0, n2);
-		gameBoard.test()[n0][n0] = new Wall(n0, n0);
+		gameBoard.test()[1][0] = new FrontDoor(1, 0);
+		gameBoard.test()[1][1] = new Hallway(1, 1);
+		gameBoard.test()[1][2] = new Hallway(1, 2);
+		gameBoard.test()[1][3] = new Hallway(1, 3);
+		gameBoard.test()[1][4] = new Hallway(1, 4);
+		gameBoard.test()[1][5] = new Hallway(1, 5);
+		gameBoard.test()[1][6] = new Hallway(1, 6);
+		gameBoard.test()[1][7] = new Hallway(1, 7);
+		gameBoard.test()[1][8] = new Hallway(1, 8);
+		gameBoard.test()[2][1] = new Hallway(2, 1);
+		gameBoard.test()[2][2] = new Hallway(2, 2);
+		gameBoard.test()[2][3] = new Hallway(2, 3);
+		gameBoard.test()[2][4] = new Hallway(2, 4);
+		gameBoard.test()[2][5] = new Hallway(2, 5);
+		gameBoard.test()[2][6] = new Hallway(2, 6);
+		gameBoard.test()[2][7] = new Hallway(2, 7);
+		gameBoard.test()[2][8] = new Hallway(2, 8);
+		gameBoard.test()[0][1] = new DiningRoom(0, 1);
+		gameBoard.test()[0][2] = new DiningRoom(0, 2);
+		gameBoard.test()[0][0] = new Wall(0, 0);
+		gameBoard.test()[0][3] = new Wall(0, 3);
+		gameBoard.test()[0][5] = new Wall(0, 5);
+		gameBoard.test()[0][9] = new Wall(0, 9);
+		gameBoard.test()[2][0] = new Wall(2, 0);
+		gameBoard.test()[3][0] = new Wall(3, 0);
+		gameBoard.test()[3][1] = new Wall(3, 1);
+		gameBoard.test()[3][3] = new Wall(3, 3);
+		gameBoard.test()[3][6] = new Wall(3, 6);
+		gameBoard.test()[3][9] = new Wall(3, 9);
+		gameBoard.test()[3][2] = new GuestRoom(3, 2);
+		gameBoard.test()[0][4] = new Bathroom(0, 4);
 		
 		int counter = 0;
 		while(gameOn)	
