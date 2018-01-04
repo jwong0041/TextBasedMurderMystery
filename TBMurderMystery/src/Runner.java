@@ -1,11 +1,16 @@
 import people.Detective;
 import people.Person;
 import room.Room;
+import room.ScienceLab;
 import room.Wall;
 
 import java.util.Scanner;
 import room.FrontDoor;
 import room.Hallway;
+import room.Kitchen;
+import room.MastersRoom;
+import room.MastersStudy;
+import room.NephewRoom;
 import room.DiningRoom;
 import room.GuestRoom;
 import room.Bathroom;
@@ -158,6 +163,15 @@ public class Runner
 		gameBoard.test()[3][9] = new Wall(3, 9);
 		gameBoard.test()[3][2] = new GuestRoom(3, 2);
 		gameBoard.test()[0][4] = new Bathroom(0, 4);
+		gameBoard.test()[3][4] = new NephewRoom(3, 4);
+		gameBoard.test()[3][5] = new NephewRoom(3, 5);
+		gameBoard.test()[3][7] = new MastersRoom(3, 7);
+		gameBoard.test()[3][8] = new MastersRoom(3, 8);
+		gameBoard.test()[2][9] = new MastersStudy(2, 9);
+		gameBoard.test()[1][9] = new MastersStudy(1, 9);
+		gameBoard.test()[0][6] = new ScienceLab(0, 6);
+		gameBoard.test()[0][7] = new ScienceLab(0, 7);
+		gameBoard.test()[0][8] = new Kitchen(0, 8);
 		
 		int counter = 0;
 		while(gameOn)	

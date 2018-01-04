@@ -3,13 +3,36 @@ import people.Person;
 // y Loc  is FIVE (5)
 public class NephewRoom extends Room {
 
-	public NephewRoom(int xLoc, int yLoc, Person occupant) 
-	{
-		super(xLoc, yLoc, occupant);
-		xLoc = 3;
-		yLoc = 5;
-		occupant = null;
+	Person occupant;
+	int xLoc;
+	int yLoc;
+	private boolean explored = false;
+	
+		public NephewRoom(int x, int y)
+		{
+			super(x,y);
+			this.xLoc = x;
+			this.yLoc = y;
+			
+		}
+		
+		public void enterRoom(Person x)
+		{
+			occupant = x;
+			x.setxLoc(this.xLoc);
+			x.setyLoc(this.yLoc);
+			if(explored == false) {
+				System.out.println("");
+			} else {
+			System.out.println("");
+			}
+			explored = true;
+		}
+		
+		public void leaveRoom (Person x)
+		{
+			occupant = null;
+		}
 	}
 
-		
-}
+
