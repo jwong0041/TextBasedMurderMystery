@@ -26,18 +26,18 @@ public class DiningRoom extends Room
 					+ "your hunger. You jolt upright as your mouth starts to water. \r\n"
 					+ "Maid: Sit down, there's enough for everybody. Count this as our treat for your service. \r\n"
 					+ "Unable to refuse, you gladly sit down as the maid hurried off to distribute the utensils. \r\n" 
-					+ "You sit there in silence while eating with the Master and Andy, when the Master suddenly speaks up. \r\n" 
-					+ "Master: I'm done eating here, I need to go visit my wife in the study room. Take your time eating. \r\n"
+					+ "You sit there in silence while eating with the Master and his nephew, when the Master suddenly speaks up. \r\n" 
+					+ "Master: I'm done eating here, I need to go wait for my wife in the Study. Take your time eating. \r\n"
 					+ "You hear a crash behind you. The maid has a panicky expression on her face as she picks up the tray she dropped. \r\n"
-					+ "Nephew: I'm done eating, go to my lab after he's done eating to clean. \r\n"
-					+ "     I dropped and broke a beaker in front of the cabinet."
+					+ "Nephew: I'm done eating too. \r\n"
+					+ "[He turns to the maid] I broke a beaker in front of the cabinet in my lab, could you clean it up for me."
 					+ "Maid: Yes sir. "
-					+ "You: I'm done eating... Uhm, where should I go now?"
-					+ "Maid: You can go rest in the guest room (: "
-					+ "You: Thanks for the meal (: \r\n"
-					+ "You start to head towards your room.");
+					+ "You: I'm done eating... Uhm, where should I stay?"
+					+ "Maid: You can rest in the guest room, make yourself at home while you wait for the rain to let up."
+					+ "You: Thanks for the meal \r\n");
 		} else {
-		System.out.println("");
+		System.out.println("You notice that the table has been cleared, and cups have been set out instead. \r\n"
+				+ "The maid probably set them up for tea later.");
 		}
 		explored = true;
 	}

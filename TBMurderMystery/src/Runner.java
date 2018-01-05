@@ -118,11 +118,12 @@ public class Runner
 					"You: What about your master? \r\n" +
 					"They are a little hesitant in telling you. \r\n" +
 					"Maid: ... Master " + " lost his wife recently... \r\n" +
-					"Butler: We are getting worried for him because he's started to see her ghost... \r\n" +
-					"Her ghost?... Before you can ask about anything the phone rings. \r\n" +
-					"Butler: Hello?... Yes... Yes... No problem. " + player1.getTitle() + " " + player1.getFamilyName() + ", the young master wants to see you. \r\n" +
-					"Butler: Please meet him in his Science Lab. Take 6 steps forward and it should be to your left. \r\n" +
-					"You: Ok lol.");
+					"Butler: We are getting worried for him because he says he started to see her ghost... \r\n" +
+					"Her ghost?..." +
+					"Maid: Anyway, thats nonesense aside, we have a meal prepared, feel free to come to the dining room ,\r\n" +
+					"we have more than enough for an additional person. \r\n" +
+					"[The Dining Rooms are (0, 1) and (0, 2)] \r\n" +
+					"[Take move one spot north and one spot west to enter the first Dining Rom.]");
 		
 		Board gameBoard = new Board(10,10);
 		gameBoard.test();

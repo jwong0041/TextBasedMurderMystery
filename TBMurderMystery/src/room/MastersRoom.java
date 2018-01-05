@@ -22,9 +22,13 @@ public class MastersRoom extends Room {
 			x.setxLoc(this.xLoc);
 			x.setyLoc(this.yLoc);
 			if(explored == false) {
-				System.out.println("");
+				System.out.println("This is the Master's Room. You feel like you shouldn't be in here...\r\n"
+						+ "You suddenly hear a squeak, like a wheel turning.\r\n"
+						+ "When you turn to look for the source of the sound, you see a rusty wheelchair seemingly moving.\r\n"
+						+ "Upon closer inspection, you realize it moved because of the faulty brakes. The wind probably pushed.");
 			} else {
-			System.out.println("");
+			System.out.println("This is the Master's Room. You feel like you shouldn't be in here...\r\n"
+					+ "The wheelchair is still there.");
 			}
 			explored = true;
 		}

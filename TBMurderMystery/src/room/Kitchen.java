@@ -22,9 +22,9 @@ public class Kitchen extends Room {
 			x.setxLoc(this.xLoc);
 			x.setyLoc(this.yLoc);
 			if(explored == false) {
-				System.out.println("");
+				System.out.println("This is the Kitchen. You notice the Maid in the back, cleaning and prepping various things.");
 			} else {
-			System.out.println("");
+			System.out.println("This is the Kitchen. You notice the Maid in the back, cleaning and prepping various things.");
 			}
 			explored = true;
 		}

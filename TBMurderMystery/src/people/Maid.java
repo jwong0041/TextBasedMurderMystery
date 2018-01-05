@@ -14,7 +14,7 @@ public class Maid extends Person
 		//she should be in the kitchen x = 0, y = 8
 	}
 
-	int emotion = 0;
+
 	public String getGreeting()
 	{
 		return "Oh, hello Mister Detective. Would you like to ask me anything?\n"
@@ -24,14 +24,7 @@ public class Maid extends Person
 				+ "- Master\n"
 				+ "- Maid\n";
 	}
-	
-	/**
-	 * Gives a response to a user statement
-	 * 
-	 * @param statement
-	 *            the user statement
-	 * @return a response based on the rules given
-	 */
+
 	public String getResponse(String statement)
 	{
 		String response = "";
@@ -46,10 +39,45 @@ public class Maid extends Person
 			response = "More like LevinTheDream amiright?";
 		}
 
-		else if (findKeyword(statement, "I want",0) >= 0)
+		else if (findKeyword(statement, "Ghost") >= 0)
 		{
-			response = transformIWantStatement(statement);
+			response = "The Master started seeing the Ghost a few months ago."
+					+ "Ah, I believe it was around the same time the green house you were hiding under was first set up."
+					+ "I believe that it's all fake. There's no way that ghosts are real.\n"
+					+ "The thought of the ghost being the late mistress really worries. Oh because... uh, its unhealthy for the Master.\n"
+					+ "There's no way way a ghost could talk right?! \n\t[She seems to be getting really nervous. Maybe you should stop now.]";
 		}	
+		
+		else if (findKeyword(statement, "Nephew") >= 0)
+		{
+			response = "The young master has been staying here for a long time now. He has been living under the Masters wing for so many years now.\n"
+					+ "Between you and me, the young master is just mooching off of the Master. He doesn't offer anything for this household, he even took up a few rooms for his Science Lab.\n"
+					+ "\t[The Science Lab is at (0, 6) and (0, 7)]\n"
+					+ "He keeps all of his materials in that room too, his science machines and cupboard full of dangerous chemicals!";
+		}	
+		
+		else if (findKeyword(statement, "Master") >= 0)
+		{
+			response = "The Master has been livining in this house for many years now.\n"
+					+ "He employed me when he and his, now late, wife first bought this manor.\n"
+					+ "He's a strict man, and so was his wife. She was bound to a wheelchair but loved to paint the scenery around here.\n"
+					+ "The Master cared for her deeply, and was devestated when she died.\n"
+					+ "I think she died when her wheelchair brakes stopped working and she fell off the cliff. Uh, thats, at least what I heard.\n"
+					+ "\t[She starts to look away and refuses to make eye contact. This would be a good time to stop.]";
+		}	
+		
+		else if (findKeyword(statement, "Maid") >= 0)
+		{
+			response = "Me? Oh I'm just a little old maid hired by two welathy people.\n"
+					+ "I do all of the cooking, so that's that I'm here in the Kitchen a lot.\n"
+					+ "I also did the maintenence for the mistresses wheelchair back when she was still alive.\n"
+					+ "The Master was kind enough to hire me for all these years, but he and his wife were anything but kind.\n"
+					+ "He is a strict and, in my opinion, quite selfish, just like his late wife.\n"
+					+ "Oh but I shouldn't be saying too much! What if the ghost hears me and gets angry!\n"
+					+ "But that's nonsense, ghosts don't exist...\n"
+					+ "\t[She starts mumbling to herself, you should stop for now.]";
+		}	
+		
 		else
 		{
 			response = "Please choose one of the following options";
@@ -58,96 +86,13 @@ public class Maid extends Person
 		return response;
 	}
 	
-	/**
-	 * Take a statement with "I want to <something>." and transform it into 
-	 * "Why do you want to <something>?"
-	 * @param statement the user statement, assumed to contain "I want to"
-	 * @return the transformed statement
-	 */
-	private String transformIWantToStatement(String statement)
-	{
-		//  Remove the final period, if there is one
-		statement = statement.trim();
-		String lastChar = statement.substring(statement
-				.length() - 1);
-		if (lastChar.equals("."))
-		{
-			statement = statement.substring(0, statement
-					.length() - 1);
-		}
-		int psn = findKeyword (statement, "I want to", 0);
-		String restOfStatement = statement.substring(psn + 9).trim();
-		return "Why do you want to " + restOfStatement + "?";
-	}
-
-	
-	/**
-	 * Take a statement with "I want <something>." and transform it into 
-	 * "Would you really be happy if you had <something>?"
-	 * @param statement the user statement, assumed to contain "I want"
-	 * @return the transformed statement
-	 */
-	private String transformIWantStatement(String statement)
-	{
-		//  Remove the final period, if there is one
-		statement = statement.trim();
-		String lastChar = statement.substring(statement
-				.length() - 1);
-		if (lastChar.equals("."))
-		{
-			statement = statement.substring(0, statement
-					.length() - 1);
-		}
-		int psn = findKeyword (statement, "I want", 0);
-		String restOfStatement = statement.substring(psn + 6).trim();
-		return "Would you really be happy if you had " + restOfStatement + "?";
-	}
 	
 	
-	/**
-	 * Take a statement with "I <something> you" and transform it into 
-	 * "Why do you <something> me?"
-	 * @param statement the user statement, assumed to contain "I" followed by "you"
-	 * @return the transformed statement
-	 */
-	private String transformIYouStatement(String statement)
-	{
-		//  Remove the final period, if there is one
-		statement = statement.trim();
-		String lastChar = statement.substring(statement
-				.length() - 1);
-		if (lastChar.equals("."))
-		{
-			statement = statement.substring(0, statement
-					.length() - 1);
-		}
-		
-		int psnOfI = findKeyword (statement, "I", 0);
-		int psnOfYou = findKeyword (statement, "you", psnOfI);
-		
-		String restOfStatement = statement.substring(psnOfI + 1, psnOfYou).trim();
-		return "Why do you " + restOfStatement + " me?";
-	}
-	
-
 	
 	
-	/**
-	 * Search for one word in phrase. The search is not case
-	 * sensitive. This method will check that the given goal
-	 * is not a substring of a longer string (so, for
-	 * example, "I know" does not contain "no").
-	 *
-	 * @param statement
-	 *            the string to search
-	 * @param goal
-	 *            the string to search for
-	 * @param startPos
-	 *            the character of the string to begin the
-	 *            search at
-	 * @return the index of the first occurrence of goal in
-	 *         statement or -1 if it's not found
-	 */
+	
+	
+	
 	private int findKeyword(String statement, String goal,
 			int startPos)
 	{
@@ -196,14 +141,6 @@ public class Maid extends Person
 		return -1;
 	}
 	
-	/**
-	 * Search for one word in phrase.  The search is not case sensitive.
-	 * This method will check that the given goal is not a substring of a longer string
-	 * (so, for example, "I know" does not contain "no").  The search begins at the beginning of the string.  
-	 * @param statement the string to search
-	 * @param goal the string to search for
-	 * @return the index of the first occurrence of goal in statement or -1 if it's not found
-	 */
 	private int findKeyword(String statement, String goal)
 	{
 		return findKeyword (statement, goal, 0);

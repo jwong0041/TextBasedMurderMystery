@@ -22,9 +22,9 @@ public class Bathroom extends Room {
 			x.setxLoc(this.xLoc);
 			x.setyLoc(this.yLoc);
 			if(explored == false) {
-				System.out.println("");
+				System.out.println("This is the bathroom. Extravagently furnished, and extremely well kept.");
 			} else {
-			System.out.println("");
+			System.out.println("This is the bathroom. Extravagently furnished, and extremely well kept.");
 			}
 			explored = true;
 		}
