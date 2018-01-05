@@ -27,7 +27,7 @@ public class DiningRoom extends Room
 					+ "Maid: Sit down, there's enough for everybody. Count this as our treat for your service. \r\n"
 					+ "Unable to refuse, you gladly sit down as the Maid hurried off to distribute the utensils");
 		} else {
-		System.out.println("Joyin's a butthole");
+		System.out.println("");
 		}
 		explored = true;
 	}
