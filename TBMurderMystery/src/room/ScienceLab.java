@@ -29,14 +29,14 @@ public class ScienceLab extends Room {
 						+ "As if luck was smiling upon me I found this mansion located nearby so I \r\n"
 						+ "decided to seek shelter from the elements here. \r\n"
 						+ "Unknown: Oh...I see. Well I guess I should introduce myself, I'm"
-						+ "Yamato Shunjei the well known freeloader of this mansion, who also \r\n"
-						+ "happens to be the nephew of the owner of this mansion. \r\n"
+						+ "     Andy Ni the well known freeloader of this mansion, who also \r\n"
+						+ "     happens to be the nephew of the owner of this mansion. \r\n"
 						+ "You spot a large assortment of scientific instruments scattered \r\n"
 						+ "throughout the room. \r\n"
 						+ "You: Do you enjoy the studying the sciences? \r\n"
-						+ "Shunjei: I guess. I graduated from MIT and I am currently hoping to find \r\n"
-						+ "a career producing scientific equipment for the disabled. \r\n"
-						+ "Well enough about me lets go get some food, dinnertime has already come. \r\n"
+						+ "Andy: I guess. I graduated from MIT and I am currently hoping to find \r\n"
+						+ "     a career producing scientific equipment for the disabled. \r\n"
+						+ "     Well enough about me lets go get some food, dinnertime has already come. \r\n"
 						+ " ");
 			} else {
 			System.out.println("");

@@ -22,7 +22,8 @@ public class GuestRoom extends Room{
 			x.setxLoc(this.xLoc);
 			x.setyLoc(this.yLoc);
 			if(explored == false) {
-				System.out.println("");
+				System.out.println("You arrive in your room, but there's not really much to do. \r\n"
+									+ "You decide to walk out of your room.");
 			} else {
 			System.out.println("");
 			}
