@@ -7,6 +7,7 @@ public class ScienceLab extends Room {
 	int xLoc;
 	int yLoc;
 	private boolean explored = false;
+	public static boolean locked = false;
 	
 		public ScienceLab(int x, int y)
 		{
@@ -22,33 +23,32 @@ public class ScienceLab extends Room {
 			x.setxLoc(this.xLoc);
 			x.setyLoc(this.yLoc);
 			if(explored == false) {
-				System.out.println("As you walk into the Science Lab you \r\n"
-						+ "see a shadow quickly sit down. He turns the chair and speaks \r\n"
-						+ "Unknown: How may I help you? I haven't seen you around here before \r\n"
-						+ "You: I was travelling when I happened to get caught up in the downpour. \r\n"
-						+ "As if luck was smiling upon me I found this mansion located nearby so I \r\n"
-						+ "decided to seek shelter from the elements here. \r\n"
-						+ "Unknown: Oh...I see. Well I guess I should introduce myself, I'm"
-						+ "     Andy Ni the well known freeloader of this mansion, who also \r\n"
-						+ "     happens to be the nephew of the owner of this mansion. \r\n"
-						+ "You spot a large assortment of scientific instruments scattered \r\n"
-						+ "throughout the room. \r\n"
-						+ "You: Do you enjoy the studying the sciences? \r\n"
-						+ "Andy: I guess. I graduated from MIT and I am currently hoping to find \r\n"
-						+ "     a career producing scientific equipment for the disabled. \r\n"
-						+ "     Well enough about me lets go get some food, dinnertime has already come. \r\n"
-						+ " ");
+				System.out.println("You slowly open the door of the science lab \r\n"
+						+ "as you hear a repetitive whispering from within. The maid pranced around the\r\n"
+						+ "room, as if deeply troubled by something. The room is filled with bottles. \r\n"
+						+ "It would be best to leave her alone."
+						+ "You hear a slight creaking sound from the Master's Room. \r\n"  
+						+ "You should probably investigate.");
 			} else {
-			System.out.println("");
+			System.out.println("You remember seeing the Maid in the kitchen, so you quickly snuck back into in the room\r\n"
+					+ "You inspect the items in the room in hopes of obtaining a lead on the origins of the 'Ghost' \r\n"
+					+ "of the mansion. You spot some scattered batteries and computer chips scattered around the room \r\n"
+					+ "along with a cabinet of chemicals such as hydrochloric acid, hydrogen peroxide, and cyanide \r\n"
+					+ "to your surprise the cabinet isn't locked. Other than that your search came up empty. \r\n"
+					+ "As you come out of the science room, you realize \r\n\"" 
+					+ "the bottle you saw in the kitchen matches the ones in the cabinet.\r\n" 
+					+ "You rush over to the kitchen!\r\n");
 			}
-			explored = true;
 		}
 		
-		public void leaveRoom (Person x)
-		{
+		public void leaveRoom (Person x) {
+
 			occupant = null;
-		}
+			MastersRoom.locked = false;
+			locked = true;
+			explored = true;
 	}
+}
 
 
 

@@ -69,6 +69,22 @@ public class Runner
 				{
 					return false;
 				}
+				
+			case "map":
+				System.out.println("[X][M][M][X]\r\n" + 
+						"[K][H][H][R]\r\n" + 
+						"[S][H][H][R]\r\n" + 
+						"[S][H][H][X]\r\n" + 
+						"[X][H][H][N]\r\n" + 
+						"[B][H][H][N]\r\n" + 
+						"[X][H][H][X]\r\n" + 
+						"[D][H][H][G]\r\n" + 
+						"[D][H][H][X]\r\n" + 
+						"[X][F][X][X]\r\n"
+						+ "M: Master’s Study F: Front door R: Master’s Room	\r\n"
+						+ "H: Hallway K: Kitchen X:Wall S: Science Lab B: Bathroom \r\n"
+						+ "D: Dining Room G: Guestroom N: Nephew’s Room\r\n"
+						+ "");
 			default:
 				break;
 					
@@ -104,7 +120,7 @@ public class Runner
 		
 		
 		System.out.println(player1.getFirstName() + " " + player1.getFamilyName());
-		System.out.println("Butler: " + player1.getTitle() + player1.getFamilyName() + ", there is a ghost haunting our mansion. \r\n" +
+		System.out.println("Butler: " + player1.getTitle() + " " + player1.getFamilyName() + ", there is a ghost haunting our mansion. \r\n" +
 					"Maid: Hush! Theres no way ghosts exists... \r\n" +
 					"You see sweat forming on her forehead.");
 		System.out.println("");
@@ -119,11 +135,10 @@ public class Runner
 					"They are a little hesitant in telling you. \r\n" +
 					"Maid: ... Master " + " lost his wife recently... \r\n" +
 					"Butler: We are getting worried for him because he says he started to see her ghost... \r\n" +
-					"Her ghost?..." +
-					"Maid: Anyway, thats nonesense aside, we have a meal prepared, feel free to come to the dining room ,\r\n" +
+					"Her ghost?... \r\n" +
+					"Maid: Anyway, that nonesense aside, we have a meal prepared, feel free to come to the dining room ,\r\n" +
 					"we have more than enough for an additional person. \r\n" +
-					"[The Dining Rooms are (0, 1) and (0, 2)] \r\n" +
-					"[Take move one spot north and one spot west to enter the first Dining Rom.]");
+					"[The Dining Rooms are (0, 1) and (0, 2)] \r\n]");
 		
 		Board gameBoard = new Board(10,10);
 		gameBoard.test();
@@ -177,8 +192,10 @@ public class Runner
 		int counter = 0;
 		while(gameOn)	
 		{
-			System.out.println("Please choose where you would like to move");
+			System.out.println("Please choose where you would like to move \r\n"
+					+ "If you would like a map, use 'map'.");
 			String move = in.nextLine();
+			
 			if(testMove(move, player1, gameBoard.test())) 
 				{
 					System.out.println("Your position is " + player1.getxLoc() + ", " + player1.getyLoc());

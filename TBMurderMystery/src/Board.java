@@ -31,14 +31,16 @@ public class Board
 	
 	public void printBoard()	//can void be nonstatic?
 	{
-		for(Room[] i : rooms)
-		{
-			for(Room room: i)
-			{
-				room.print();		//need to write a print method in the print class
-			}
-		} 
-		System.out.println();	//each row gets a line in between
+		System.out.println("[X][M][M][X]\r\n" + 
+				"[K][H][H][R]\r\n" + 
+				"[S][H][H][R]\r\n" + 
+				"[S][H][H][X]\r\n" + 
+				"[X][H][H][N]\r\n" + 
+				"[B][H][H][N]\r\n" + 
+				"[X][H][H][X]\r\n" + 
+				"[D][H][H][G]\r\n" + 
+				"[D][H][H][X]\r\n" + 
+				"[X][F][X][X]");
 		
 	}
 	
