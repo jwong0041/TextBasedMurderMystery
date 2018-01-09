@@ -17,6 +17,7 @@ import room.Bathroom;
 
 public class Runner 
 {
+	public static boolean gameOn = true;
 	public boolean locked;
 	public static boolean testMove(String move, Person p, Room[][] map)
 	{
@@ -144,7 +145,6 @@ public class Runner
 		gameBoard.test();
 		gameBoard.startBoard(gameBoard.test());
 		Scanner in = new Scanner(System.in);
-		boolean gameOn = true;
 		gameBoard.test()[1][0].enterRoom(player1);
 		gameBoard.test()[1][0] = new FrontDoor(1, 0);
 		gameBoard.test()[1][1] = new Hallway(1, 1);
@@ -191,9 +191,7 @@ public class Runner
 		while(gameOn)	
 		{
 
-			System.out.println("Please choose where you would like to move using WASD\r\n");
-
-			System.out.println("Please choose where you would like to move using {N, S, E, W}\r\n"
+			System.out.println("Please choose where you would like to move using {W, A, S, D}\r\n"
 
 					+ "If you would like a map, use 'map'.");
 			String move = in.nextLine();
