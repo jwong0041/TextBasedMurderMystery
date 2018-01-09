@@ -22,7 +22,7 @@ public class Runner
 	{
 		move = move.toLowerCase().trim();
 		switch (move) {
-			case "w":
+			case "a":
 				if ((p.getxLoc() > 0) && (map[p.getxLoc()-1][p.getyLoc()].locked() == false))
 				{
 					
@@ -34,7 +34,7 @@ public class Runner
 				{
 					return false;
 				}
-			case "n":
+			case "w":
 				if ((p.getyLoc()< 9) && (map[p.getxLoc()][p.getyLoc() + 1].locked() == false))
 				{
 					map[p.getxLoc()][p.getyLoc()].leaveRoom(p);
@@ -46,7 +46,7 @@ public class Runner
 					return false;
 				}
 
-			case "e":
+			case "d":
 				if ((p.getxLoc() < 3) && (map[p.getxLoc()+1][p.getyLoc()].locked() == false))
 				{
 					map[p.getxLoc()][p.getyLoc()].leaveRoom(p);
@@ -140,14 +140,12 @@ public class Runner
 					"we have more than enough for an additional person. \r\n" +
 					"[The Dining Rooms are (0, 1) and (0, 2)] \r\n]");
 		
-		Board gameBoard = new Board(10,10);
+		Board gameBoard = new Board(4,10);
 		gameBoard.test();
 		gameBoard.startBoard(gameBoard.test());
 		Scanner in = new Scanner(System.in);
 		boolean gameOn = true;
 		gameBoard.test()[1][0].enterRoom(player1);
-		//room.setExplored(true);
-		
 		gameBoard.test()[1][0] = new FrontDoor(1, 0);
 		gameBoard.test()[1][1] = new Hallway(1, 1);
 		gameBoard.test()[1][2] = new Hallway(1, 2);
@@ -192,7 +190,7 @@ public class Runner
 		int counter = 0;
 		while(gameOn)	
 		{
-			System.out.println("Please choose where you would like to move \r\n"
+			System.out.println("Please choose where you would like to move using WASD\r\n"
 					+ "If you would like a map, use 'map'.");
 			String move = in.nextLine();
 			
