@@ -18,5 +18,5 @@ public class Wall extends Room {
 		return true;
 	}
 	
-	
+	//please avoid walking into walls. it hurts and you're not Houdini.
 }

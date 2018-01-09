@@ -24,20 +24,19 @@ public class ScienceLab extends Room {
 			x.setyLoc(this.yLoc);
 			if(explored == false) {
 				System.out.println("You slowly open the door of the science lab \r\n"
-						+ "as you hear a repetitive whispering from within. The maid pranced around the\r\n"
-						+ "room, as if deeply troubled by something. The room is filled with bottles. \r\n"
-						+ "It would be best to leave her alone."
-						+ "You hear a slight creaking sound from the Master's Room. \r\n"  
-						+ "You should probably investigate.");
+						+ "as you hear a repetitive whispering from within. The maid paced around the\r\n"
+						+ "room, as if deeply contemplating something. The room is filled with various bottles and science tech. \r\n"
+						+ "It would be best to not bother her."
+						+ "Looking around the room, you notice a cabinet that holds a lot of bottles of varius chemicals, \r\n"
+						+ "a high end computer, and a recording device.");
 			} else {
-			System.out.println("You remember seeing the Maid in the kitchen, so you quickly snuck back into in the room\r\n"
+			System.out.println("[This is the Science Lab]\r\n"
 					+ "You inspect the items in the room in hopes of obtaining a lead on the origins of the 'Ghost' \r\n"
 					+ "of the mansion. You spot some scattered batteries and computer chips scattered around the room \r\n"
 					+ "along with a cabinet of chemicals such as hydrochloric acid, hydrogen peroxide, and cyanide \r\n"
-					+ "to your surprise the cabinet isn't locked. Other than that your search came up empty. \r\n"
-					+ "As you come out of the science room, you realize \r\n\"" 
-					+ "the bottle you saw in the kitchen matches the ones in the cabinet.\r\n" 
-					+ "You rush over to the kitchen!\r\n");
+					+ "to your surprise the cabinet isn't locked. Other than that your search came up empty. \r\n" 
+					+ "One of the bottle you saw in the kitchen matches the ones in the cabinet.\r\n" 
+					+ "You need to get to the kitchen!\r\n");
 			}
 		}
 		

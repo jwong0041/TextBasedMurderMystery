@@ -25,9 +25,9 @@ public class FrontDoor extends Room
 			System.out.println("The front door is here, leading to the outside. \r\n"
 					+ "It is pouring outside. It was really lucky you got in the mansion when you did.");
 		} else {
-		System.out.println("The front door is ahead of you. \r\n"
+		System.out.println("[This is the Front Door] \r\n"
 				+ "You check to see if the rain has stopped, but it doesn't look like its stopping anytime soon. \r\n"
-				+ "But you shouldn't leave now anyway. You have a feeling there is a potential murder brewing in this mansion.");
+				+ "But you shouldn't leave now anyway. You have a feeling there is touble brewing in this mansion.");
 		}
 		explored = true;
 	}	
