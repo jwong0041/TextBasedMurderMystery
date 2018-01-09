@@ -29,11 +29,11 @@ public class Kitchen extends Room {
 			x.setyLoc(this.yLoc);
 			if(explored == false) {
 				System.out.println("You crept slowly into the kitchen. At the other end of the kitchen the maid \r\n"
-						+ "fumbles with a bottle that looks oddly familiar. She pours some into a cup. You think its best to leave her alone.");
-				System.out.println("I should probably go into the room where I seen this bottle before.\r\n");
+						+ "fumbles with a bottle that looks extremely out of place for a kitchen. She pours some into a cup. You think its best not to approach her.");
+				System.out.println("I should probably go into the room where I seen lots of bottles before.\r\n");
 			} else {
-			System.out.println("The maid left just before you decided to snoop around some more. You look inside and decide to replace the cup \r\n"
-					+ "that the maid prepared with a cup of salt.");
+			System.out.println("[This is the Kitchen]\r\n The maid had left before you decided to snoop around some more. You look inside and decide to replace the cup \r\n"
+					+ "that the maid had prepared with a cup full of salt.");
 			end = true;
 			}
 

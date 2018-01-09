@@ -81,9 +81,9 @@ public class Runner
 						"[D][H][H][G]\r\n" + 
 						"[D][H][H][X]\r\n" + 
 						"[X][F][X][X]\r\n"
-						+ "M: Master’s Study F: Front door R: Master’s Room	\r\n"
-						+ "H: Hallway K: Kitchen X:Wall S: Science Lab B: Bathroom \r\n"
-						+ "D: Dining Room G: Guestroom N: Nephew’s Room\r\n"
+						+ "M: Master’s Study | F: Front door | R: Master’s Room	\r\n"
+						+ "H: Hallway | K: Kitchen | X:Wall | S: Science Lab | B: Bathroom \r\n"
+						+ "D: Dining Room | G: Guestroom | N: Nephew’s Room\r\n"
 						+ "");
 			default:
 				break;
@@ -104,14 +104,14 @@ public class Runner
 					"You gladly accept because of the rain, and you enter the building.");
 		System.out.println("");
 //System.out.println("Butler: Welcome to the mansion of " + Master.getFamilyName());
-		System.out.println("Maid: We are glad that you didn't get soaked in the rain.\r\n" +
-					"Butler: I noticed your trench coat... Are you a detective? \r\n");
+		System.out.println("  Maid: We are glad that you didn't get soaked in the rain.\r\n" +
+					"  Butler: I noticed your trench coat... Are you a detective? \r\n");
 		System.out.println(""); 
 		System.out.println("Yes, my name is.... \r\n" +
-					"...What is your first name?"); 
+					"{Enter your first name.}"); 
 		Scanner sc = new Scanner(System.in);
 		String firstName = sc.nextLine();
-		System.out.println("What is your family name?");
+		System.out.println("{Enter your family name.}");
 		Scanner sc1 = new Scanner(System.in);
 		String familyName = sc1.nextLine();
 		String title = "Detective";
@@ -120,25 +120,25 @@ public class Runner
 		
 		
 		System.out.println(player1.getFirstName() + " " + player1.getFamilyName());
-		System.out.println("Butler: " + player1.getTitle() + " " + player1.getFamilyName() + ", there is a ghost haunting our mansion. \r\n" +
-					"Maid: Hush! Theres no way ghosts exists... \r\n" +
-					"You see sweat forming on her forehead.");
+		System.out.println("   Butler: " + player1.getTitle() + " " + player1.getFamilyName() + ", there is a ghost haunting our mansion. \r\n" +
+					"   Maid: Hush! Theres no way ghosts exists... \r\n" +
+					"You see sweat forming on her forehead and she fidgets nervously.");
 		System.out.println("");
 		System.out.println("You hear a car being parked outside in the rain. \r\n" +
 					"A young man walks into the mansion. \r\n" +
-					"Maid and Butler: Welcome back. \r\n" +
+					"   Maid and Butler: Welcome back. \r\n" +
 					"He walks away without responding.");
 		System.out.println("");								//add nephew name again
-		System.out.println("Maid: That was Master's nephew, " + ". \r\n" +
-					"Butler: He spends most of his time in his laboratory. \r\n" +
+		System.out.println("   Maid: That was Master's nephew." +
+					"   Butler: He spends most of his time in his laboratory. \r\n" +
 					"You: What about your master? \r\n" +
 					"They are a little hesitant in telling you. \r\n" +
-					"Maid: ... Master " + " lost his wife recently... \r\n" +
-					"Butler: We are getting worried for him because he says he started to see her ghost... \r\n" +
+					"   Maid: ... Master lost his wife recently. \r\n" +
+					"   Butler: We are getting worried for him because he says he started to see her ghost... \r\n" +
 					"Her ghost?... \r\n" +
-					"Maid: Anyway, that nonesense aside, we have a meal prepared, feel free to come to the dining room ,\r\n" +
+					"   Maid: Anyway, that nonesense aside, we have a meal prepared, feel free to come to the dining room ,\r\n" +
 					"we have more than enough for an additional person. \r\n" +
-					"[The Dining Rooms are (0, 1) and (0, 2)] \r\n]");
+					"[The Dining Rooms are (0, 1) and (0, 2)] \r\n");
 		
 		Board gameBoard = new Board(4,10);
 		gameBoard.test();
@@ -190,7 +190,11 @@ public class Runner
 		int counter = 0;
 		while(gameOn)	
 		{
-			System.out.println("Please choose where you would like to move using WASD\r\n"
+
+			System.out.println("Please choose where you would like to move using WASD\r\n");
+
+			System.out.println("Please choose where you would like to move using {N, S, E, W}\r\n"
+
 					+ "If you would like a map, use 'map'.");
 			String move = in.nextLine();
 			

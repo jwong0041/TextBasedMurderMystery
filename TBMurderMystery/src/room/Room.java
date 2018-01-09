@@ -15,7 +15,6 @@ public class Room
 		this.yLoc = y;
 	}
 	
-	//what is this???
 	public Room() {
 		super();
 		// TODO Auto-generated constructor stub

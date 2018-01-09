@@ -27,16 +27,16 @@ public class MastersRoom extends Room {
 			x.setxLoc(this.xLoc);
 			x.setyLoc(this.yLoc);
 			if(explored == false) {
-				System.out.println("This is the Master's Room. You feel like you shouldn't be in here...\r\n"
+				System.out.println("[This is the Master's Room]\r\n You feel like you shouldn't be in here...\r\n"
 						+ "You suddenly hear a squeak, like a wheel turning.\r\n"
-						+ "When you turn to look for the source of the sound, you see a rusty wheelchair seemingly moving.\r\n"
+						+ "When you turn to look for the source of the sound, you see a rusty wheelchair seemingly moving on its own.\r\n"
 						+ "Upon closer inspection, you realize it moved because of the faulty brakes. The wind probably pushed it.\r\n");
-				System.out.println("You hear the Master walk into his study. You hear him talking with a deep sadness to someone."
-						+ "Your heart drops at the thought that he's talking to the ghost... \r\n"
+				System.out.println("You hear the Master walk into his study across the hall. You hear him talking with a deep sadness to someone."
+						+ "Your heart drops at the thought that he's talking to the ghost of his wife... \r\n"
 						+ "You should probably investigate.\r\n");
 			} else {
-			System.out.println("This is the Master's Room. You feel like you shouldn't be in here...\r\n"
-					+ "The wheelchair is still there.");
+			System.out.println("[This is the Master's Room]\r\n You feel like you shouldn't be in here...\r\n"
+					+ "The wheelchair is still there in the corner, now pressed up against the wall.");
 			}
 			explored = true;
 		}

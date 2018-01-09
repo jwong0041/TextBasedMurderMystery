@@ -9,7 +9,7 @@ class Nephew extends Person
 		this.xLoc = xLoc;
 		this.yLoc = yLoc;
 		
-		//this.xLoc = xLoc; //make the nephew stay in one of the nephew's room.... randomly generate one or the other
+		//make the nephew stay in one of the nephew's room.... randomly generate one or the other
 	}
 
 	

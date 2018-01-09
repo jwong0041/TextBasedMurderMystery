@@ -27,7 +27,7 @@ public class MastersStudy extends Room {
 			x.setxLoc(this.xLoc);
 			x.setyLoc(this.yLoc);
 			if(explored == false) {
-				System.out.println("Curious to see if the ghost the Master was talking about was real, you peek into the study room. \r\n" 
+				System.out.println("[This is the Master's Study]\r\n Curious to see if the ghost the Master was talking about was real, you peek into the study. \r\n" 
 			+ "You see the Master deeper in the study, staring at a bookshelf. \r\n"
 			+ "Then you see a light shine across the wall! It's the ghost!"
 			+ "... and is that a womans's voice? It doesn't sound like the maid's, could it be the late wife?");
