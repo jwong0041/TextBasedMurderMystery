@@ -210,7 +210,12 @@ public class Runner
 								+ "The Master of the household has died.\n"
 								+ "- G A M E   O V E R -");
 			gameOn = false;
-		}	
+		}
+		
+		if(DiningRoom.fina == false) {
+			System.out.println("[The Game Has Ended]");
+			gameOn = false;
+		}
 	}
 			
 			

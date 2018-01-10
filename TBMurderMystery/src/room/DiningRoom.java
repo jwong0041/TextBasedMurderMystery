@@ -1,6 +1,5 @@
 package room;
 import java.util.Scanner;
-
 import people.Person;
 
 public class DiningRoom extends Room
@@ -16,7 +15,7 @@ public class DiningRoom extends Room
 	public static boolean a5 = true;
 	public static boolean a6 = true;
 	public static boolean a7 = true;
-	private boolean fina = true;
+	public static boolean fina = true;
 	public static boolean actEnd = false;
 	public static boolean culpritFound = false;
 	public static boolean finalEnding = false;
@@ -28,6 +27,7 @@ public class DiningRoom extends Room
 		this.xLoc = x;
 		this.yLoc = y;
 	}
+	
 	
 	public boolean locked( ) {
 		return locked;
@@ -131,6 +131,8 @@ public class DiningRoom extends Room
 								+ "You see a familiar face on the screen, a face you haven't seen in a weeks time. The owner of the mansion was on TV but not for the right reasons. He looked at you\r\n"
 								+ "coldly as his eye sockets seem to stare into your soul. He was dead. Did you fully solve the mystery?");
 						a4 = false;
+						fina = false;
+						break;
 					} else {  if((finir(response) == true) && (a5 == true) && (actEnd == true)) {
 							System.out.println("The scenario didn't seem right, something was missing.\r\n"
 									+ "Then it hits you the things that you've missed.\r\n"
@@ -154,6 +156,14 @@ public class DiningRoom extends Room
 											+ "Nephew: Because I'm drowning in debt you klutz, and you're so stingy you wouldn't even lend me money when I asked! Then what am I supposed to do?!\r\n"
 											+ "The rest of the day pasted in a blur of sirens and tears. The mystery has been solved and you happened to have ruined a family's life." );
 							fina = false;
+							break;
+								} else {
+									if((finir(response) == false)) {
+										System.out.println("It seems that your answer was not the evaluation of the case. The witnesses soon lost trust in your skills.\r\n"
+												+ "Ten days later after being kicked out, the Master dies. You have lost.");
+										fina = false;
+										break;
+									}
 								}
 							}
 						}
